@@ -26,11 +26,9 @@ public class NoteRepository {
     }
     
     private NoteRepository() {
-    	MongoClientURI uri = new MongoClientURI(
-    		    "mongodb+srv://red:blxgre369@cluster0-oaiys.mongodb.net/test?retryWrites=true");
+    	MongoClientURI uri = new MongoClientURI("your mongo string goes here");
 
     	client = new MongoClient(uri);
-    	//client = new MongoClient(new MongoClientURI("mongodb+srv://red:blxgre369@cluster0-oaiys.mongodb.net/test?retryWrites=true\r\n"));
     	database = client.getDatabase("notes");
     	collection = database.getCollection("notes");
     	System.out.println("connected");
