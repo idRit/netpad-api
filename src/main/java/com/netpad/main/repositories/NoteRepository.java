@@ -26,7 +26,8 @@ public class NoteRepository {
     }
     
     private NoteRepository() {
-    	MongoClientURI uri = new MongoClientURI("your mongo string goes here");
+    	MongoClientURI uri = new MongoClientURI(
+    		"MONGO STR");
 
     	client = new MongoClient(uri);
     	database = client.getDatabase("notes");
